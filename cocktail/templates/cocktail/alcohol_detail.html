@@ -1,7 +1,4 @@
-<head>
-  {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
-</head>
-
+{% extends "cocktail/base.html" %} {% block content %}
 <h1>Cocktail Detail</h1>
 
 <div class="d-flex">
@@ -15,3 +12,4 @@
     <p>{{ alcohol.description }}</p>
   </div>
 </div>
+{% endblock %}
