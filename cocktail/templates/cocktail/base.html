@@ -18,66 +18,7 @@
     />
   </head>
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Recipe</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'alcohollist' %}"
-                >Alcoholpedia</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <img
-                class="avatar dropdown-toggle"
-                id="navbarDropdown"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                src="https://cdn.midjourney.com/4f338d51-4981-497a-b6b1-e9304133d311/0_2.png"
-              />
-              <div
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdown"
-              >
-                <a class="dropdown-item" href="#">My Favoritesy</a>
-                <a class="dropdown-item" href="#">My Investory</a>
-                <a class="dropdown-item" data-turbo-method="delete" href="#"
-                  >Log out</a
-                >
-              </div>
-            </li>
-            <!--li class="nav-item"-->
-            <!--/li-->
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    {% block content %} {% endblock %}
+    {% include 'cocktail/nav_bar.html' %} {% block content %} {% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

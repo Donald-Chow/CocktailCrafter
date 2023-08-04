@@ -1,0 +1,56 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img
+        src="https://media.discordapp.net/attachments/1112292984747204731/1137054085577715752/daforcez_cocktail_receipe_web_app_mordern_hip_logo_vector_simpl_678b1f7a-093c-4959-92c9-9c5ec483a369.png?width=467&height=467"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'alcohollist' %}">Alcoholpedia</a>
+        </li>
+        <li class="nav-item dropdown">
+          <img
+            class="avatar dropdown-toggle"
+            id="navbarDropdown"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            src="https://cdn.midjourney.com/4f338d51-4981-497a-b6b1-e9304133d311/0_2.png"
+          />
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">My Favoritesy</a>
+            <a class="dropdown-item" href="#">My Investory</a>
+            <a class="dropdown-item" data-turbo-method="delete" href="#"
+              >Log out</a
+            >
+          </div>
+        </li>
+        <!--li class="nav-item"-->
+        <!--/li-->
+      </ul>
+    </div>
+  </div>
+</div>
