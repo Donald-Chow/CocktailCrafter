@@ -11,19 +11,34 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
   </head>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-  </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
@@ -31,22 +46,36 @@
               <a class="nav-link" href="#">Recipe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'alcohollist' %}">Alcoholpedia</a>
+              <a class="nav-link" href="{% url 'alcohollist' %}"
+                >Alcoholpedia</a
+              >
             </li>
             <li class="nav-item dropdown">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://cdn.midjourney.com/4f338d51-4981-497a-b6b1-e9304133d311/0_2.png" />
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <img
+                class="avatar dropdown-toggle"
+                id="navbarDropdown"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                src="https://cdn.midjourney.com/4f338d51-4981-497a-b6b1-e9304133d311/0_2.png"
+              />
+              <div
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
                 <a class="dropdown-item" href="#">My Favoritesy</a>
                 <a class="dropdown-item" href="#">My Investory</a>
-                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+                <a class="dropdown-item" data-turbo-method="delete" href="#"
+                  >Log out</a
+                >
               </div>
             </li>
             <!--li class="nav-item"-->
             <!--/li-->
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
     {% block content %} {% endblock %}
     <script
