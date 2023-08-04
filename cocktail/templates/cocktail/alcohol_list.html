@@ -1,3 +1,4 @@
+{% extends 'cocktail/base.html' %} {% block content %}
 <h1>Alcohol List</h1>
 
 {% for alcohol in alcohol_list %}
@@ -8,4 +9,4 @@
 />
 <h3>{{ alcohol.name }}</h3>
 
-{% endfor %}
+{% endfor %} {% endblock content %}
