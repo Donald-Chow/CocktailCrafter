@@ -1,0 +1,11 @@
+<h1>Alcohol List</h1>
+
+{% for alcohol in alcohol_list %}
+
+<img
+  src="https://www.thecocktaildb.com/images/ingredients/{{alcohol.name}}-Small.png"
+  alt=""
+/>
+<h3>{{ alcohol.name }}</h3>
+
+{% endfor %}

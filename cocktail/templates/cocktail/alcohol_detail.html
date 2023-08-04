@@ -1,0 +1,17 @@
+<head>
+  {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+</head>
+
+<h1>Cocktail Detail</h1>
+
+<div class="d-flex">
+  <img
+    src="https://www.thecocktaildb.com/images/ingredients/{{alcohol.name}}-Small.png"
+    class="object-fit-contain"
+    alt=""
+  />
+  <div>
+    <p class="text-center">{{ alcohol.name }}</p>
+    <p>{{ alcohol.description }}</p>
+  </div>
+</div>
