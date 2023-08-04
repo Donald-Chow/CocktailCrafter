@@ -17,7 +17,7 @@ class Recipe(models.Model):
     cdbid = models.IntegerField(unique=True)
     name = models.CharField(max_length=100, blank=False, null=False)
     category = models.CharField(max_length=100)
-    instruction = models.TextField(default="")
+    instructions = models.TextField(default="")
     alcoholic = models.BooleanField(null=True)
     glass = models.CharField(max_length=100)
     drinkThumb = models.URLField(default="")
