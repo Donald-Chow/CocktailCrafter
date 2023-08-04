@@ -1,1 +1,22 @@
 <h1>HOME PAGE WOHOO</h1>
+
+<h2>Cocktail of the day</h2>
+<div>
+  <img src="{{cocktail.drinkThumb}}" />
+  <p>{{cocktail.name}}</p>
+  <p>Category - {{cocktail.category}}</p>
+  <p>Glass - {{cocktail.glass}}</p>
+  <table class="table">
+    <tr>
+      <th scope="col">Ingredient</th>
+      <th scope="col">Amount</th>
+    </tr>
+    {% for ingredient in cocktail.ingredients %}
+    <tr scope="row">
+      <td>{{ ingredient.name }}</td>
+      <td>{{ ingredient.measure }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>{{cocktail.instructions}}</p>
+</div>
