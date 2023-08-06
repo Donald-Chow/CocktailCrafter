@@ -22,5 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('alcohol', views.AlcoholList.as_view(), name="alcohollist"),
-    path('alcohol/<pk>', views.AlcoholDetail.as_view(), name='alcoholdetail')
+    path('alcohol/<pk>', views.AlcoholDetail.as_view(), name='alcoholdetail'),
+    path('recipe', views.RecipeList.as_view(), name="recipelist"),
+    path('recipe/<pk>', views.RecipeDetail.as_view(), name="recipedetail"),
+    path('inventory', views.InventoryList.as_view(), name="inventorylist"),
+    path('inventory/<pk>',
+         views.InventoryDetail.as_view(),
+         name="inventorydetail")
 ]

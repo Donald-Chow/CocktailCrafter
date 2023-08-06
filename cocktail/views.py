@@ -26,8 +26,10 @@ class AlcoholList(ListView):
 
     def get_context_data(self, **kwargs):
         # Call the superclass's get_context_data() to get the default context
-        type = self.request.GET.get('type')
         context = super().get_context_data(**kwargs)
+        # get query params
+        type = self.request.GET.get('type')
+        # get list of unique types
         types = Alcohol.objects.values_list('type', flat=True).distinct()
         # Add additional data to the context dictionary
         additional_data = {'types': types, 'type': type}
@@ -42,3 +44,25 @@ class AlcoholDetail(DetailView):
     model = Alcohol
     template_name = 'cocktail/alcohol_detail.html'
     context_object_name = 'alcohol'
+
+
+class RecipeList(ListView):
+    model = Recipe
+    template_name = 'cocktail/recipe_list.html'
+
+
+class RecipeDetail(DetailView):
+    model = Recipe
+    template_name = 'cocktail/recipe_detail.html'
+    context_object_name = 'recipe'
+
+
+class InventoryList(ListView):
+    model = Inventory
+    template_name = 'cocktail/inventory_list.html'
+
+
+class InventoryDetail(DetailView):
+    model = Inventory
+    template_name = 'cocktail/inventory_detail.html'
+    context_object_name = 'inventory'

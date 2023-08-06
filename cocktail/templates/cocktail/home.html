@@ -6,7 +6,8 @@
     {% if request.user.is_authenticated %}
     <div class="col-8">
       <p>{{request.user}}</p>
-      {% comment %} show dashboard {% endcomment %}
+      {% include "cocktail/_inventory_stock.html"%} {% comment %} show dashboard
+      {% endcomment %}
     </div>
     {% else %}
     <div class="col-8">

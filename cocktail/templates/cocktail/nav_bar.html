@@ -23,7 +23,7 @@
           <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Recipe</a>
+          <a class="nav-link" href="{% url 'recipelist' %}">Recipe</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'alcohollist' %}">Alcoholpedia</a>
@@ -41,8 +41,10 @@
             class="dropdown-menu dropdown-menu-end"
             aria-labelledby="navbarDropdown"
           >
-            <a class="dropdown-item" href="#">My Favoritesy</a>
-            <a class="dropdown-item" href="#">My Investory</a>
+            <a class="dropdown-item" href="#">My Favorites</a>
+            <a class="dropdown-item" href="{% url 'inventorylist' %}"
+              >My Inventory</a
+            >
             <a class="dropdown-item" data-turbo-method="delete" href="#"
               >Log out</a
             >
