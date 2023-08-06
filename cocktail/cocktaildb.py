@@ -24,3 +24,37 @@ class Cocktaildb:
             'drinkThumb': self.cocktail['strDrinkThumb'],
             'ingredients': ingredients
         }
+
+
+# Storing Alcohol Seed here
+# def seed():
+#     n = 1
+#     while n <= 616:
+#         response = requests.get(
+#             "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=" +
+#             str(n))
+#         if response.json()['ingredients']:
+#             data = response.json()['ingredients'][0]
+#             cdbid = data['idIngredient']
+#             name = data['strIngredient']
+#             print("creating" + name)
+#             if data['strDescription']:
+#                 description = data['strDescription']
+#             else:
+#                 description = ""
+#             if data['strType']:
+#                 type = data['strType']
+#             else:
+#                 type = "Others"
+#             alcoholic = (data['strAlcohol'] == "Yes")
+#             if data['strABV']:
+#                 abv = int(data['strABV'])
+#             else:
+#                 abv = 0
+#             Alcohol(cdbid=cdbid,
+#                     name=name,
+#                     description=description,
+#                     type=type,
+#                     alcoholic=alcoholic,
+#                     abv=abv).save()
+#         n += 1

@@ -24,6 +24,19 @@ class AlcoholList(ListView):
     model = Alcohol
     template_name = 'cocktail/alcohol_list.html'
 
+    def get_context_data(self, **kwargs):
+        # Call the superclass's get_context_data() to get the default context
+        type = self.request.GET.get('type')
+        context = super().get_context_data(**kwargs)
+        types = Alcohol.objects.values_list('type', flat=True).distinct()
+        # Add additional data to the context dictionary
+        additional_data = {'types': types, 'type': type}
+        context.update(additional_data)
+
+        if type:
+            context['alcohol_list'] = context['alcohol_list'].filter(type=type)
+        return context
+
 
 class AlcoholDetail(DetailView):
     model = Alcohol

@@ -1,25 +1,25 @@
 {% extends 'cocktail/base.html' %} {% block content %}
+<div class="container">
+  <h1 class="text-center">HOME PAGE WOHOO</h1>
 
-<h1>HOME PAGE WOHOO</h1>
-
-<h2>Cocktail of the day</h2>
-<div>
-  <img src="{{cocktail.drinkThumb}}" />
-  <p>{{cocktail.name}}</p>
-  <p>Category - {{cocktail.category}}</p>
-  <p>Glass - {{cocktail.glass}}</p>
-  <table class="table">
-    <tr>
-      <th scope="col">Ingredient</th>
-      <th scope="col">Amount</th>
-    </tr>
-    {% for ingredient in cocktail.ingredients %}
-    <tr scope="row">
-      <td>{{ ingredient.name }}</td>
-      <td>{{ ingredient.measure }}</td>
-    </tr>
-    {% endfor %}
-  </table>
-  <p>{{cocktail.instructions}}</p>
+  <div class="row">
+    {% if request.user.is_authenticated %}
+    <div class="col-8">
+      <p>{{request.user}}</p>
+      {% comment %} show dashboard {% endcomment %}
+    </div>
+    {% else %}
+    <div class="col-8">
+      <p>{{request.user}}</p>
+      {% comment %} show welcome {% endcomment %}
+    </div>
+    {% endif %}
+    <div class="col-4">
+      <h2>Cocktail of the day</h2>
+      <div>
+        {% include "cocktail/_cocktail_card.html" with cocktail=cocktail%}
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock content %}

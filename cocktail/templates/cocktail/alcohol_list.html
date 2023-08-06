@@ -1,12 +1,20 @@
 {% extends 'cocktail/base.html' %} {% block content %}
 <h1>Alcohol List</h1>
-
-{% for alcohol in alcohol_list %}
-
-<img
-  src="https://www.thecocktaildb.com/images/ingredients/{{alcohol.name}}-Small.png"
-  alt=""
-/>
-<h3>{{ alcohol.name }}</h3>
-
-{% endfor %} {% endblock content %}
+<div class="d-flex flex-wrap">
+  {%for type in types%}
+  <form action="alcohol" method="GET">
+    <input type="text" name="type" hidden="true" value="{{type}}" />
+    <button type="submit" class="btn btn-primary">{{type}}</button>
+  </form>
+  {% endfor %}
+</div>
+<div>
+  {% for alcohol in alcohol_list %} {% if alcohol.type == type %}
+  <img
+    src="https://www.thecocktaildb.com/images/ingredients/{{alcohol.name}}-Small.png"
+    alt=""
+  />
+  <h3>{{ alcohol.name }}{{alcohol.pk}}</h3>
+  {% endif %} {% endfor %}
+</div>
+{% endblock content %}

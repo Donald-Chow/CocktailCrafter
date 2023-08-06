@@ -34,3 +34,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.card-cocktail {
+  width: 400px;
+  background-color: grey;
+}
+.card-cocktail img {
+  width: 300px;
+  object-fit: contain;
+  margin: auto;
+}

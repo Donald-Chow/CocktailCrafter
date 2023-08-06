@@ -8,7 +8,7 @@ class Alcohol(models.Model):
     cdbid = models.IntegerField(unique=True)
     name = models.CharField(max_length=100, blank=False, null=False)
     description = models.TextField(default="")
-    type = models.CharField(max_length=100)
+    type = models.CharField(max_length=100, default="Others")
     alcoholic = models.BooleanField(null=True)
     abv = models.IntegerField(null=True)
 
